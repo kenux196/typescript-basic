@@ -1,0 +1,19 @@
+{
+  "name": "typescript-basic",
+  "version": "1.0.0",
+  "main": "src/index.ts",
+  "repository": "git@github.com-kenux:kenux196/typescript-basic.git",
+  "author": "kenux196 <kenux.yun@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "start": "node ./bin/index.js",
+    "dev": "ts-node ./src/index.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^22.9.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3"
+  },
+  "dependencies": {}
+}
