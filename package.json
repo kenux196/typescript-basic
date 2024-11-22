@@ -10,7 +10,9 @@
     "start": "node ./bin/index.js",
     "dev": "ts-node ./src/index.ts"
   },
-  "dependencies": {},
+  "dependencies": {
+    "dayjs": "^1.11.13"
+  },
   "devDependencies": {
     "@types/node": "^22.9.1",
     "ts-node": "^10.9.2",
