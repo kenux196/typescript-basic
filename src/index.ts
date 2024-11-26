@@ -39,3 +39,23 @@ console.log(dayjs().locale('ko').toString());
 // dayjs.extend(localeData);
 // console.log(dayjs.months());
 // console.log(dayjs().localeData().months());
+
+const message = 'Hello, World!';
+console.log(message.toLowerCase());
+
+const member = {
+  id: 1,
+  name: 'kenux',
+};
+
+// member.location;
+
+function greet(person: string, date: Date) {
+  console.log(`Hello ${person}, today is ${date.toDateString()}`);
+}
+
+greet('kenux', new Date());
+
+const kenux = new User('kenux', 47);
+console.log(`${kenux.getName()}, ${kenux.getAge()}`);
+console.log(typeof kenux);
