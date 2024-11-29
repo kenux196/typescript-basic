@@ -1,10 +1,4 @@
-import dayjs from 'dayjs';
-import utc from 'dayjs/plugin/utc';
-import localeData from 'dayjs/plugin/localeData';
-import 'dayjs/locale/ko';
-
 import User from './user/user';
-import DayjsUtils from './dayjs-utils/dayjs-utils';
 
 console.log('Hello, Typescript~~~');
 
