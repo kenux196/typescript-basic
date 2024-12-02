@@ -1,3 +1,4 @@
+import TsStudy from './study/ts-study';
 import User from './user/user';
 
 console.log('Hello, Typescript~~~');
@@ -30,3 +31,6 @@ greet('kenux', new Date());
 const kenux = new User('kenux', 47);
 console.log(`${kenux.getName()}, ${kenux.getAge()}`);
 console.log(typeof kenux);
+
+const study = new TsStudy();
+study.run();
