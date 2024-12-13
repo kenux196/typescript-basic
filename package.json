@@ -5,17 +5,18 @@
   "repository": "git@github.com-kenux:kenux196/typescript-basic.git",
   "author": "kenux196 <kenux.yun@gmail.com>",
   "license": "MIT",
+  "type": "module",
   "scripts": {
     "build": "tsc",
     "start": "node ./bin/index.js",
-    "dev": "ts-node ./src/index.ts"
+    "dev": "tsx ./src/index.ts"
   },
   "dependencies": {
     "dayjs": "^1.11.13"
   },
   "devDependencies": {
     "@types/node": "^22.9.1",
-    "ts-node": "^10.9.2",
+    "tsx": "^4.19.2",
     "typescript": "^5.6.3"
   },
   "volta": {

@@ -1,8 +1,7 @@
 {
   "compilerOptions": {
-    "target": "es2016",
-    "lib": ["es6"],
-    "module": "commonjs",
+    "target": "ESNext",
+    "module": "ESNext",
     "rootDir": "src",
     "outDir": "./bin",
     "esModuleInterop": true,
@@ -10,5 +9,8 @@
     "strict": true,
     "noImplicitAny": true,
     "skipLibCheck": true
+  },
+  "ts-node": {
+    "esm": true
   }
 }
