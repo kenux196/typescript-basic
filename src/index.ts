@@ -1,48 +1,74 @@
-// Enum type
-// typescript only
+// Algebraic type (대수 타입)
 
-enum Role {
-  ADMIN = 0,
-  USER = 1,
-  GUEST = 2,
-}
-console.log(Role);
+// Union(합집합) 타입
+let a: string | number;
 
-enum Language {
-  korean = 'ko',
-  english = 'en',
-}
+a = 1;
+a = 'hello';
+// a = true; // error!
 
-const user11 = {
-  name: 'admin',
-  role: Role.ADMIN,
-  language: Language.korean,
+let arr: (number | string | boolean)[] = [1, 'hello', true];
+console.log(arr);
+arr.push('kenux');
+console.log(arr);
+
+type Dog = {
+  name: string;
+  color: string;
 };
-console.log(user11);
-
-const user12 = {
-  name: 'user12',
-  role: Role.USER,
-  language: Language.english,
+const dogA = {
+  name: 'happy',
+  color: 'black',
 };
-console.log(user12);
 
-// enum은 컴파일 결과 객체가 된다.
+// arr.push(dogA) // error!
 
-// any & unknown
+type Person = {
+  name: string;
+  language: string;
+};
 
-// any: typescript only, 타입 검사 X
-// any type은 최대한 사용 자제할 것. 타입 검사를 하지 않으므로 컴파일 단계에서 오류 검출 불가
-let anyVar = 10;
-// anyVar = 'hello' // 오류 발생
+type Union1 = Dog | Person;
+let union1: Union1 = {
+  name: 'abc',
+  color: 'black',
+};
+let union2: Union1 = {
+  name: 'efg',
+  language: 'ko',
+};
+let union3: Union1 = {
+  name: 'xyz',
+  color: 'brown',
+  language: 'en',
+};
+// let union4: Union1 = { // error case!
+//   name: 'error!',
+// };
 
-let anyVar2: any = 10;
-anyVar2 = 'hello'; // 정상 동작.
-anyVar2 = true;
-anyVar2 = {};
+// intersection type
+let variable: number & string; // never type으로 추론
 
-// unknown type
-let unknownVar: unknown;
-unknownVar = '';
-unknownVar = 1;
-unknownVar = () => {};
+type Intersction = Dog & Person;
+let intersection1: Intersction = {
+  name: 'xxx',
+  color: 'red',
+  language: 'ko',
+};
+console.log(intersection1);
+
+// 타입 추론
+// best common type
+let arr2 = [1, 'string'];
+
+// 타입 단언
+type Human = {
+  name: string;
+  age: number;
+};
+
+let human1 = {} as Human;
+console.log(human1);
+human1.name = 'jay';
+human1.age = 33;
+console.log(human1);
